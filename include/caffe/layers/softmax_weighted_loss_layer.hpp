@@ -12,6 +12,8 @@
 
 namespace caffe {
 
+
+
 /**
  * @brief Computes the multinomial logistic loss for a one-of-many
  *        classification task, passing real-valued predictions through a
@@ -59,7 +61,7 @@ class SoftmaxWithWeightedLossLayer : public LossLayer<Dtype> {
       const vector<Blob<Dtype>*>& top);
 
   virtual inline const char* type() const { return "SoftmaxWithWeightedLoss"; }
-  virtual inline int ExactNumTopBlobs() const { return -1; }
+  virtual inline int ExactNumTopBlobs() const { return  -1; }
   virtual inline int MinTopBlobs() const { return 1; }
   virtual inline int MaxTopBlobs() const { return 2; }
 
@@ -67,7 +69,7 @@ class SoftmaxWithWeightedLossLayer : public LossLayer<Dtype> {
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,
       const vector<Blob<Dtype>*>& top);
   virtual void Forward_gpu(const vector<Blob<Dtype>*>& bottom,
-      const vector<Blob<Dtype>*>& top);
+      const vector<Blob<Dtype>*>& top1);
   /**
    * @brief Computes the softmax loss error gradient w.r.t. the predictions.
    *
