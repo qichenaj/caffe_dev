@@ -6,6 +6,7 @@
 // The MNIST dataset could be downloaded at
 //    http://yann.lecun.com/exdb/mnist/
 
+
 #include <gflags/gflags.h>
 #include <glog/logging.h>
 #include <google/protobuf/text_format.h>
@@ -172,6 +173,7 @@ void convert_dataset(const char* image_filename, const char* label_filename,
   }
   delete[] pixels;
 }
+
 
 int main(int argc, char** argv) {
 #ifndef GFLAGS_GFLAGS_H_

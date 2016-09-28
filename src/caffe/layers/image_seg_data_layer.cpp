@@ -203,36 +203,6 @@ void ImageSegDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
     }
   }
   batch_timer.Stop();
-  // /////////
-  // Dtype* transformed_data  = this->transformed_data_.mutable_cpu_data();
-  // Dtype* transformed_label = this->transformed_label_.mutable_cpu_data();
-  // cv::Mat_<Dtype> seg(480,480);
-  // cv::Mat_<Dtype> image1(480,480);
-  // cv::Mat_<Dtype> image2(480,480);
-  // cv::Mat_<Dtype> image3(480,480);
-  // int top_index = 0;
-  // for (int h = 0; h < 480; ++h) {
-  //   for (int w = 0; w < 480; ++w) {
-  //     // for image  
-  //     top_index = (0 * 480 + h) * 480 + w;
-  //     image1(h,w) = transformed_data[top_index]+203;
-  //     top_index = (1 * 480 + h) * 480 + w;
-  //     image2(h,w) = transformed_data[top_index]+142;
-  //     top_index = (2 * 480 + h) * 480 + w;
-  //     image3(h,w) = transformed_data[top_index]+204;
-
-    
-  //     top_index = h * 480 + w;
-  //     seg(h,w) = transformed_label[top_index];
-  //   }
-  // }
-  // cv::imwrite("/home/lqyu/img1.jpg",image1);
-  // cv::imwrite("/home/lqyu/img2.jpg",image2);
-  // cv::imwrite("/home/lqyu/img3.jpg",image3);
-  // cv::imwrite("/home/lqyu/seg.jpg",seg);
-  // //////////
-
-
 
   DLOG(INFO) << "Prefetch batch: " << batch_timer.MilliSeconds() << " ms.";
   DLOG(INFO) << "     Read time: " << read_time / 1000 << " ms.";

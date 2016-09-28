@@ -7,6 +7,7 @@ message BlobShape {
   repeated int64 dim = 1 [packed = true];
 }
 
+
 message BlobProto {
   optional BlobShape shape = 7;
   repeated float data = 5 [packed = true];
@@ -302,6 +303,7 @@ message ParamSpec {
   // The multiplier on the global weight decay for this parameter.
   optional float decay_mult = 4 [default = 1.0];
 }
+
 
 // NOTE
 // Update the next available ID when you add a new LayerParameter field.
@@ -620,6 +622,7 @@ message ConvolutionParameter {
     CUDNN = 2;
   }
   optional Engine engine = 15 [default = DEFAULT];
+
 
   // The axis to interpret as "channels" when performing convolution.
   // Preceding dimensions are treated as independent inputs;

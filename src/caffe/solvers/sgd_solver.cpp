@@ -254,6 +254,7 @@ void SGDSolver<Dtype>::SnapshotSolverState(const string& model_filename) {
     default:
       LOG(FATAL) << "Unsupported snapshot format.";
   }
+  
 }
 
 template <typename Dtype>

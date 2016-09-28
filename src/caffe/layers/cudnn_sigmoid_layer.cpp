@@ -28,6 +28,7 @@ void CuDNNSigmoidLayer<Dtype>::Reshape(const vector<Blob<Dtype>*>& bottom,
   cudnn::setTensor4dDesc<Dtype>(&top_desc_, N, K, H, W);
 }
 
+
 template <typename Dtype>
 CuDNNSigmoidLayer<Dtype>::~CuDNNSigmoidLayer() {
   // Check that handles have been setup before destroying.

@@ -15,6 +15,7 @@
 #include "caffe/util/math_functions.hpp"
 #include "caffe/util/rng.hpp"
 
+
 namespace caffe {
 
 template <typename Dtype>
@@ -143,6 +144,7 @@ void ImageDataLayer<Dtype>::load_batch(Batch<Dtype>* batch) {
     this->transformed_data_.set_cpu_data(prefetch_data + offset);
     this->data_transformer_->Transform(cv_img, &(this->transformed_data_));
     trans_time += timer.MicroSeconds();
+
 
     prefetch_label[item_id] = lines_[lines_id_].second;
     // go to the next iter
