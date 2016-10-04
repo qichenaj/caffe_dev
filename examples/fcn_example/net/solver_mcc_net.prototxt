@@ -35,7 +35,7 @@ max_iter: 10000
 
 # snapshot intermediate results
 snapshot: 10000
-snapshot_prefix: "examples/neonate-brain/mcc_model/single_modal_T1"
+snapshot_prefix: "examples/fcn_example/"
 
 # solver mode: CPU or GPU
 solver_mode: GPU
