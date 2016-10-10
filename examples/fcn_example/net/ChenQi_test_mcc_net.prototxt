@@ -582,7 +582,7 @@ layer {
   convolution_param {
     num_output: 9
     kernel_size: 1
-    engine: CUDNN
+    engine: CAFFE
   }
 }
 
@@ -623,7 +623,7 @@ layer {
   convolution_param {
     num_output: 9
     kernel_size: 1
-    engine: CUDNN
+    engine: CAFFE
   }
 }
 
@@ -673,7 +673,7 @@ layer {
   convolution_param {
     num_output: 9
     kernel_size: 1
-    engine: CUDNN
+    engine: CAFFE
   }
 }
 
